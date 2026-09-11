@@ -5,86 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
-  type: vless
-  server: 185.112.249.201
-  port: 8443
-  uuid: 9b18ccef-b9e0-41d1-8990-9d970569e142
+  type: ss
+  server: 194.77.229.56
+  port: 12007
+  cipher: chacha20-ietf-poly1305
+  password: 1ed0af1c413861ff
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: web-socket.tgdaosheng.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=bpb.yousef.isegaro.comfp=chrome
-    headers:
-      Host: web-socket.tgdaosheng.ggff.net
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
-  type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  type: vless
-  server: 172.67.67.178
-  port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rAyAn-007.nAsTaRaN.DpDnS.OrG
-- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
-  type: vless
-  server: 162.159.152.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
-- name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
-  type: vless
-  server: 45.131.209.30
+  server: 172.64.88.168
   port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 6f876b28-1b3e-4088-85c0-d299e56bfccd
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /
+    path: /pyip=ProxyIP.JP.CMLiussss.net
     headers:
-      Host: vms.lifetime04.workers.dev
+      Host: throbbing-haze-fbde.388-6c4.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -92,10 +31,6 @@ proxy-groups:
   - AUTO
   - 🇦🇪 阿联酋 (UAE) 01 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -103,9 +38,5 @@ proxy-groups:
   proxies:
   - 🇦🇪 阿联酋 (UAE) 01 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
 rules:
 - MATCH,PROXIES
