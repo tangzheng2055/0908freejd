@@ -41,6 +41,20 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🇫🇮 FI 04 - xiaohe
+  type: vless
+  server: andikurdi07.global.ssl.fastly.net
+  port: 443
+  uuid: 75df10cc-f745-4aae-aa74-400082f02682
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: wtqrycyqafndeba.global.ssl.fastly.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wtqrycyqafndeba.global.ssl.fastly.net
 proxy-groups:
 - name: PROXIES
   type: select
@@ -49,6 +63,7 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
+  - 🇫🇮 FI 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -57,5 +72,6 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
+  - 🇫🇮 FI 04 - xiaohe
 rules:
 - MATCH,PROXIES
